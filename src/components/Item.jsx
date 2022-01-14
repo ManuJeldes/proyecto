@@ -1,10 +1,9 @@
 import React from "react"
 
-
 function Item({product}) {
     return (
     <div>
-        <article className="flex flex-col ">
+        <article className="container col-lg-3 col-md-6 mb-3">
                 <div className="card" style={{width: '18rem'}}>
                     <img src={product.foto} className="card-img-top" alt="Torta de 20 cms de diametro"/>
                     <div className="card-body">

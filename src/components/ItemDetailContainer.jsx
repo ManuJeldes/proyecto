@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import ItemList  from './ItemList'
-import ItemDetail from './ItemDetail'
 import React from 'react'
 import torta22 from '../img/torta22.jpg'
 import torta20 from '../img/torta20.jpg'
@@ -18,20 +17,20 @@ const myPromise = new Promise((resolve, reject) =>{
                 "nombre": "Torta 20 cms",
                 "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 10 a 15 personas",
                 "precio": 13000
-            },
-            {
-                "id": 2,
-                "foto": torta22,
-                "nombre": "Torta 22 cms",
-                "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 16 a 20 personas",
-                "precio": 15000
-            },
-            {
-                "id": 3,
-                "foto": torta25,
-                "nombre": "Torta 25 cms",
-                "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 21 a 25 personas <br>",
-                "precio": 17000
+            // },
+            // {
+            //     "id": 2,
+            //     "foto": torta22,
+            //     "nombre": "Torta 22 cms",
+            //     "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 16 a 20 personas",
+            //     "precio": 15000
+            // },
+            // {
+            //     "id": 3,
+            //     "foto": torta25,
+            //     "nombre": "Torta 25 cms",
+            //     "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 21 a 25 personas <br>",
+            //     "precio": 17000
             }]
 
             resolve(products)
@@ -43,12 +42,12 @@ const myPromise = new Promise((resolve, reject) =>{
     }
 })
 
-function ItemListContainer () {
+function ItemDetailContainer () {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         myPromise
-        .then(res => setProducts(res))
+        .then(res => res.slice(0, 1))
         .catch(err => console.log("err: ", err) )
     }, [])
     return (
@@ -58,4 +57,4 @@ function ItemListContainer () {
     )
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;
