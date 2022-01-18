@@ -15,7 +15,7 @@ function Item({product}) {
                                 </td>
                             </tr>
                         </p>
-                        <a className="d-flex btn btn-warning agregar-carrito" >Ver detalles</a>
+                        <a className="d-flex btn btn-warning" >Ver detalles</a>
                     </div>
                 </div>
             </article>

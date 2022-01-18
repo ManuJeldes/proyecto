@@ -3,7 +3,7 @@ import { useState} from 'react'
 
 function ItemCount (){
     const [count,setCount]=useState(1)
-    const stock=6
+    const stock=4
     const inicio=1
 
     return(
@@ -21,7 +21,7 @@ function ItemCount (){
             <button className="counter"
              onClick={() => {
                  if(count<stock) {setCount(count+1)}
-                 else{alert("Producto sin stock")}
+                 else{alert("Producto sin stock suficiente")}
                 
             }}>
             +

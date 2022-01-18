@@ -18,20 +18,20 @@ const myPromise = new Promise((resolve, reject) =>{
                 "nombre": "Torta 20 cms",
                 "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 10 a 15 personas",
                 "precio": 13000
-            },
-            {
-                "id": 2,
-                "foto": torta22,
-                "nombre": "Torta 22 cms",
-                "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 16 a 20 personas",
-                "precio": 15000
-            },
-            {
-                "id": 3,
-                "foto": torta25,
-                "nombre": "Torta 25 cms",
-                "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 21 a 25 personas <br>",
-                "precio": 17000
+            // },
+            // {
+            //     "id": 2,
+            //     "foto": torta22,
+            //     "nombre": "Torta 22 cms",
+            //     "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 16 a 20 personas",
+            //     "precio": 15000
+            // },
+            // {
+            //     "id": 3,
+            //     "foto": torta25,
+            //     "nombre": "Torta 25 cms",
+            //     "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 21 a 25 personas <br>",
+            //     "precio": 17000
             }]
 
             resolve(products)

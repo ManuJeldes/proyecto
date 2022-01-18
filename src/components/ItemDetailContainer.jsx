@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import ItemList  from './ItemList'
+//import ItemList  from './ItemList'
+import ItemDetail from './ItemDetail'
 import React from 'react'
 import torta22 from '../img/torta22.jpg'
 import torta20 from '../img/torta20.jpg'
@@ -16,7 +17,8 @@ const myPromise = new Promise((resolve, reject) =>{
                 "foto": torta20,
                 "nombre": "Torta 20 cms",
                 "descripcion": "Tres capas de bizcocho <br> Dos capas de relleno a elección <br> Decoración en crema <br> Aproximadamente para 10 a 15 personas",
-                "precio": 13000
+                "precio": 13000,
+                "stock": 4
             // },
             // {
             //     "id": 2,
@@ -47,12 +49,13 @@ function ItemDetailContainer () {
 
     useEffect(() => {
         myPromise
-        .then(res => res.slice(0, 1))
+        .then(res => setProducts(res))
         .catch(err => console.log("err: ", err) )
     }, [])
     return (
-        <div>
-           <ItemList products={products}/>
+        <div className='col-lg-3 col-md-6 mb-3'>
+           {products.map((product) => <ItemDetail key={product.id } product={product}/>
+      )}
         </div>
     )
 }
