@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react'
 import ItemCount from '../ItemCount'
-//Simport ItemDetail from './ItemDetail'
 import React from 'react'
 import { productos } from '../../productos'
 import { useParams } from 'react-router-dom'
-// import torta22 from '../img/torta22.jpg'
-// import torta20 from '../img/torta20.jpg'
-// import torta25 from '../img/torta25.jpg'
+
 
 
 const myPromise = new Promise((resolve, reject) =>{
