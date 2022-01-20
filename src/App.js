@@ -16,11 +16,6 @@ import ItemDetailContainer from './componentes/Pages/ItemDetailContainer';
 //import * as bootstrap from 'bootstrap';
 
 
-
-
-
-
-
 function App() {
   return (
     <BrowserRouter>
