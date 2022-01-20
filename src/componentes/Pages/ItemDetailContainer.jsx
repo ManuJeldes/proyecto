@@ -24,6 +24,7 @@ const myPromise = new Promise((resolve, reject) =>{
 function ItemDetailContainer () {
     const [products, setProducts] = useState({})
     const {id} = useParams()
+    console.log(products)
     useEffect(() => {
         myPromise
         .then(res => {
@@ -42,7 +43,7 @@ function ItemDetailContainer () {
             <div className="card mb-3" style={{width: '540px'}}>
             <div className="row no-gutters">
                 <div className="col-md-4">
-                <img src={products.foto} className="card-img-top" alt="Torta de 20 cms de diametro"/>
+                <img src={`.${products.foto}`} className="card-img-top" alt="Torta de 20 cms de diametro"/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">

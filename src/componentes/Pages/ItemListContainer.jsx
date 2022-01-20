@@ -29,7 +29,13 @@ function ItemListContainer ({value}) {
     useEffect(() => {
         myPromise
         .then(res => {
-            const filtro=res.filter(product => product.category===value)
+            const filtro=res.filter(product => {
+                if(value){
+                    return product.category===value
+                }else{
+                    return true
+                }
+            })
             // console.log(filtro)
             setProducts(filtro)
             })

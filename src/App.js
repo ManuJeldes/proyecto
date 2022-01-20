@@ -7,9 +7,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Navbar from './componentes/Navbar';
-import Cupcakes from './componentes/Pages/Cupcakes';
 import Home from './componentes/Pages/Home';
-import Popcakes from './componentes/Pages/Popcakes';
 import Tortas from './componentes/Pages/Tortas';
 import ItemDetailContainer from './componentes/Pages/ItemDetailContainer';
 //import logo from './logo.svg';

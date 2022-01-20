@@ -2,7 +2,6 @@ import React , {useEffect} from 'react'
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
-import logo from '../img/logo.png'
 import $ from 'jquery';
 
 const Navbar = () => {
@@ -51,7 +50,7 @@ const Navbar = () => {
       <NavLink className="navbar-brand navbar-logo" to="/" exact>
         <div className="">
           <a href="index.html" className="logo">
-            <img src={logo} alt="Logo de cupcakes" width="60px" height="60px"/>
+            <img src="../img/logo.png" alt="Logo de cupcakes" width="60px" height="60px"/>
           </a>
         </div>
       </NavLink>

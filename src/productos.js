@@ -1,6 +1,6 @@
 export const productos=[{
     id: "1",
-    foto: "../../../img/torta20.jpg",
+    foto: "./img/torta20.jpg",
     nombre: "Torta 20 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
