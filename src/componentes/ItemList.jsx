@@ -1,13 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-// import ItemCount from "./ItemCount";
 
 function ItemList({product}) {
     
     return (
     <div>
-        <div className="container col-lg-3 col-md-6 mb-3">
+        <div className="">
         <article className="container col-lg-3 col-md-6 mb-3">
                 <div className="card" style={{width: '18rem'}}>
                     <img src={product.foto} className="card-img-top" alt="Torta de 20 cms de diametro"/>

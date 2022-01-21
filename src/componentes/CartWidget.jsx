@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Fragment } from 'react/cjs/react.production.min'
 
 
@@ -7,8 +8,10 @@ export function CartWidget (props) {
 
     return <Fragment>
         <div className="mt-3 ms-5">
+            
             <img src="../img/carrito.png" alt="cartwidgets" width="40px" height="40px"/>
             <span className=''>{numOfItems}</span>
+            
         </div>
         </Fragment>
 }

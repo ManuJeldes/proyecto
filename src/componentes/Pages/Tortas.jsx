@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemListContainer from './ItemListContainer'
+import ItemListContainer from '../ItemListContainer'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Tortas = () => {

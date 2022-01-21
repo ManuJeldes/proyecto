@@ -9,9 +9,9 @@ import './App.css';
 import Navbar from './componentes/Navbar';
 import Home from './componentes/Pages/Home';
 import Tortas from './componentes/Pages/Tortas';
-import ItemDetailContainer from './componentes/Pages/ItemDetailContainer';
-//import logo from './logo.svg';
-//import * as bootstrap from 'bootstrap';
+import ItemDetailContainer from './componentes/ItemDetailContainer';
+import  Cart  from './componentes/Pages/Cart';
+
 
 
 function App() {
@@ -23,11 +23,14 @@ function App() {
           <Route path="/" exact>
             <Home/>
           </Route>
-          <Route path="/:category" exact>
+          <Route path="/category/:category" exact>
             <Tortas/>
           </Route>
           <Route path="/item-detail/:id" exact>
             <ItemDetailContainer/>
+          </Route>
+          <Route path="/cart" exact>
+            <Cart/>
           </Route>
         </Switch>
       </main>

@@ -7,9 +7,9 @@ function ItemCount ({stock}){
     const inicio=1
 
     return(
-        <div className=" d-flex item-count">
+        <div className=" d-flex item-count btn btn-outline-danger">
             
-            <button  className="btn btn-danger"
+            <button  className="btn btn-warning ms-2 me-5"
             onClick={() => {
                 if(count>inicio) {setCount(count-1)}
             }}>
@@ -18,7 +18,7 @@ function ItemCount ({stock}){
 
             <p>{count}</p>
         
-            <button className="btn btn-danger "
+            <button className="btn btn-warning ms-5"
              onClick={() => {
                  if(count<stock) {setCount(count+1)}
                  else{alert("Producto sin stock suficiente")}

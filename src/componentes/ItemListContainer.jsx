@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
-import ItemList  from './ItemList'
-//Simport ItemDetail from './ItemDetail'
+import ItemList from './ItemList'
 import React from 'react'
-import { productos } from '../../productos'
-// import torta22 from '../img/torta22.jpg'
-// import torta20 from '../img/torta20.jpg'
-// import torta25 from '../img/torta25.jpg'
+import { productos } from '../productos'
+
 
 
 const myPromise = new Promise((resolve, reject) =>{

@@ -1,6 +1,6 @@
 import React , {useEffect} from 'react'
 import './Navbar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 import $ from 'jquery';
 
@@ -46,14 +46,15 @@ const Navbar = () => {
 
   return (
   <nav className="navbar navbar-expand-lg navbar-mainbg">
-    
-      <NavLink className="navbar-brand navbar-logo" to="/" exact>
-        <div className="">
-          <a href="index.html" className="logo">
+      <Link className="nav-link" to="/" exact>
+        <div className="navbar-brand navbar-logo">
+          <a href="#" className="logo">
             <img src="../img/logo.png" alt="Logo de cupcakes" width="60px" height="60px"/>
           </a>
+       
         </div>
-      </NavLink>
+      </Link>  
+      
     
       <button className="navbar-toggler" onClick={ function(){
           setTimeout(function(){ animation(); });
@@ -75,26 +76,28 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/tortas" exact>
+              <NavLink className="nav-link" to="/category/tortas">
                 Tortas
               </NavLink> 
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/cupcakes" exact>
+              <NavLink className="nav-link" to="/category/cupcakes" >
                 Cupcakes
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/popcakes" exact>
+              <NavLink className="nav-link" to="/category/popcakes" >
                 Popcakes
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" exact>
+              <NavLink className="nav-link" to="/category/contact" >
                 Contact Us
               </NavLink>
             </li>
-            <CartWidget className="item-count" numOfItems={4}/>
+            <Link className="nav-link" to="/cart" exact>
+              <CartWidget className="item-count" numOfItems={4}/>
+            </Link>
         </ul>
       </div>
   </nav>

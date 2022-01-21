@@ -1,6 +1,6 @@
 export const productos=[{
     id: "1",
-    foto: "./img/torta20.jpg",
+    foto: "/img/torta20.jpg",
     nombre: "Torta 20 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
@@ -12,7 +12,7 @@ export const productos=[{
 },
 {
     id: "2",
-    foto: "./img/torta22.jpg",
+    foto: "/img/torta22.jpg",
     nombre: "Torta 22 cms",
     descripcion: `Tres capas de bizcocho  
                 Dos capas de relleno a elección  
@@ -24,7 +24,7 @@ export const productos=[{
 },
 {
     id: "3",
-    foto: "./img/torta25.jpg",
+    foto: "/img/torta25.jpg",
     nombre: "Torta 25 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
@@ -36,7 +36,7 @@ export const productos=[{
 },
 {
     id: "4",
-    foto: "./img/torta28.jpg",
+    foto: "/img/torta28.jpg",
     nombre: "Torta 28 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
@@ -48,7 +48,7 @@ export const productos=[{
 },
 {
     id: "5",
-    foto: "./img/torta30.jpg",
+    foto: "/img/torta30.jpg",
     nombre: "Torta 30 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
@@ -60,7 +60,7 @@ export const productos=[{
 },
 {
     id: "6",
-    foto: "./img/tortarectangular.jpg",
+    foto: "/img/tortarectangular.jpg",
     nombre: "Torta Rect. 25x38 cms",
     descripcion: `Tres capas de bizcocho 
                 Dos capas de relleno a elección 
@@ -72,7 +72,7 @@ export const productos=[{
 },
 {
     id: "7",
-    foto: "./img/tortaespecial.jpg",
+    foto: "/img/tortaespecial.jpg",
     nombre: "Torta especial",
     descripcion: `Dos o tres pisos y rellenos 
                 Aplicaciones en fondant 
@@ -84,7 +84,7 @@ export const productos=[{
 },
 {
     id: "8",
-    foto: "./img/redvelvet.jpg",
+    foto: "/img/redvelvet.jpg",
     nombre: "Cupcake Red velvet",
     descripcion: `Bizcocho de exquisito terciopelo rojo 
                 Frosting de cream cheese 
@@ -95,7 +95,7 @@ export const productos=[{
 },
 {
     id: "9",
-    foto: "./img/choconuez.jpg",
+    foto: "/img/choconuez.jpg",
     nombre: "Cupcake Choco-nuez",
     descripcion: `Bizcocho de chocolate 
                 Trozos de nuez 
@@ -106,7 +106,7 @@ export const productos=[{
 },
 {
     id: "10",
-    foto: "./img/butter.jpg",
+    foto: "/img/butter.jpg",
     nombre: "Cupcake buttercream",
     descripcion: `Bizcocho de vainilla o chocolate 
                 Frosting de buttercream 
@@ -117,7 +117,7 @@ export const productos=[{
 },
 {
     id: "11",
-    foto: "./img/explosion.jpg",
+    foto: "/img/explosion.jpg",
     nombre: "Cupcake explosión de chocolate",
     descripcion: `Bizcocho de chocolate amargo 
                 Frosting de chocolate 
@@ -128,7 +128,7 @@ export const productos=[{
 },
 {
     id: "12",
-    foto: "./img/hihat.jpg",
+    foto: "/img/hihat.jpg",
     nombre: "Cupcake Hi-Hat",
     descripcion: `Bizcocho de chocolate 
                 Frosting de exquisito merengue italiano 
@@ -139,7 +139,7 @@ export const productos=[{
 },
 {
     id: "13",
-    foto: "./img/vainillacream.jpg",
+    foto: "/img/vainillacream.jpg",
     nombre: "Cupcake Cream",
     descripcion: `Bizcocho de vainilla o chocolate 
                 Frosting de crema chantilly 
@@ -150,7 +150,7 @@ export const productos=[{
 },
 {
     id: "14",
-    foto: "./img/minicupcake.jpg",
+    foto: "/img/minicupcake.jpg",
     nombre: "Mini Cupcake",
     descripcion: `Bizcocho de chocolate 
                 Frosting de crema 
@@ -161,7 +161,7 @@ export const productos=[{
 },
 {
     id: "15",
-    foto: "./img/popcakes.jpg",
+    foto: "/img/popcakes.jpg",
     nombre: "Popcake Chocolate",
     descripcion: `Relleno de bizcocho 
                 Cobertura de chocolate a elección 
@@ -172,7 +172,7 @@ export const productos=[{
 },
 {
     id: "16",
-    foto: "./img/popcakesrosas.jpg",
+    foto: "/img/popcakesrosas.jpg",
     nombre: "Popcake Crema",
     descripcion: `Relleno de bizcocho 
                 Cobertura con crema a elección 
@@ -183,7 +183,7 @@ export const productos=[{
 },
 {
     id: "17",
-    foto: "./img/popespecial.jpg",
+    foto: "/img/popespecial.jpg",
     nombre: "Popcake crema y fondant",
     descripcion: `Relleno de bizcocho 
                 Cobertura con crema a elección 
@@ -194,7 +194,7 @@ export const productos=[{
 },
 {
     id: "18",
-    foto: "./img/popcakesespecial.jpg",
+    foto: "/img/popcakesespecial.jpg",
     nombre: "Popcake Especial",
     descripcion: `Relleno de bizcocho 
                 Cobertura de chocolate a elección 
