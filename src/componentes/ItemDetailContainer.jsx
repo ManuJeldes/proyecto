@@ -50,9 +50,9 @@ function ItemDetailContainer () {
                     <div className="card-body">
                         <h5 className="card-title">{products.nombre}</h5>
                         <p className="card-text">{products.descripcion}</p>
-                    <Link className="nav-link" to="/cart" exact>
+                    {/* <Link className="nav-link" to="/cart" exact>
                         <a href="" className="d-flex btn btn-warning" >Agregar Al Carrito</a>
-                    </Link>
+                    </Link> */}
                     </div>
                     <ItemCount onAdd={()=> {} } stock={products.stock} initial={1}/>
                 </div>
