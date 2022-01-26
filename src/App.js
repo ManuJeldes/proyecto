@@ -11,11 +11,13 @@ import Home from './componentes/Pages/Home';
 import Tortas from './componentes/Pages/Tortas';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import  Cart  from './componentes/Pages/Cart';
+import { CartProvider } from './provider/CartProvider';
 
 
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <Navbar/>
       <main>
@@ -35,6 +37,7 @@ function App() {
         </Switch>
       </main>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
