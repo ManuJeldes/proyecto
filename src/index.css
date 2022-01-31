@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fa-times-circle {
+  color: #FF107A
+}
+
+/* .submenu {
+  position: initial;
+}
+
+.submenu #carrito {
+  display: block;
+}
+
+.submenu:hover #carrito {
+  display: block;
+  color: #ffea32;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background: #fff;
+  padding: 20px;
+} */
+
+.numOfItem {
+  color: white;
+}

@@ -3,6 +3,7 @@ import './Navbar.css';
 import { NavLink, Link } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 import $ from 'jquery';
+import Cart from './Pages/Cart';
 
 const Navbar = () => {
 

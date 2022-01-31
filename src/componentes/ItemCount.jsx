@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { useState, Fragment} from 'react'
 import {Link} from 'react-router-dom'
+import { CartContext } from '../context/CartContext.js'
 
-function ItemCount ({stock,productos}){
+function ItemCount ({stock,producto}){
+    const carroContext = useContext(CartContext)
     const [count,setCount]=useState(1)
-   
-    const inicio=1
+        console.log(carroContext)
+        const inicio=1
 
     function sumar (event){
         if(count<stock){
@@ -23,9 +25,10 @@ function ItemCount ({stock,productos}){
 
     function agregarCarrito (event){
 
-        
+        carroContext.addItem(producto, count)
 
         alert(`Producto agregado al carrito`)
+
     }
 
     return(
@@ -34,9 +37,9 @@ function ItemCount ({stock,productos}){
             <td><button className='btn btn-danger' onClick={restar}>-</button></td>
               <td className='px-2'>{count}</td>
             <td><button className='btn btn-danger' onClick={sumar}>+</button></td>
-            <Link to="/cart">
+            {/* <Link to="/cart"> */}
             <div class="d-grid gap-2"><button className='btn btn-warning' type="button" onClick={agregarCarrito}>Agregar al carrito</button></div>
-            </Link>
+            {/* </Link> */}
         </tr>
         </Fragment>
        

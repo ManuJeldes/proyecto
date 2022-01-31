@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import ItemCount from './ItemCount'
 import React from 'react'
 import { productos } from '../productos'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext.js'
 
 
 
@@ -23,6 +24,7 @@ const myPromise = new Promise((resolve, reject) =>{
 })
 
 function ItemDetailContainer () {
+    const carroContext = useContext(CartContext)
     const [products, setProducts] = useState({})
     const {id} = useParams()
     console.log(products)
@@ -44,7 +46,7 @@ function ItemDetailContainer () {
             <div className="card mb-3" style={{width: '540px'}}>
             <div className="row no-gutters">
                 <div className="col-md-4">
-                <img src={`${products.foto}`} className="card-img-top" alt="Torta de 20 cms de diametro"/>
+                <img src={`${products.foto}`} className="card-img-top" style={{width: '120px'}} alt="Torta de 20 cms de diametro"/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
@@ -54,7 +56,7 @@ function ItemDetailContainer () {
                         <a href="" className="d-flex btn btn-warning" >Agregar Al Carrito</a>
                     </Link> */}
                     </div>
-                    <ItemCount onAdd={()=> {} } stock={products.stock} initial={1}/>
+                    <ItemCount producto={products} onAdd={()=> {} } stock={products.stock} initial={1}/>
                 </div>
             </div>
         </div>
