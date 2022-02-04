@@ -5,38 +5,24 @@ import { productos } from '../productos'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext.js'
+import { getProductById } from '../firebase'
 
 
 
-const myPromise = new Promise((resolve, reject) =>{
-    let resolucion= true
-
-    if(resolucion) {
-        setTimeout(() => {
-            resolve(productos)
-            
-        }, 2000)
-        
-    }
-    else {
-        reject("ERROR")
-    }
-})
 
 function ItemDetailContainer () {
     const carroContext = useContext(CartContext)
     const [products, setProducts] = useState({})
     const {id} = useParams()
     console.log(products)
+    
+    async function getProduct(id) {
+    const data = await getProductById(id)
+    // console.log(data)
+    setProducts(data)
+}
     useEffect(() => {
-        myPromise
-        .then(res => {
-          console.log(id)
-            const filtro=res.find(product => product.id===id)
-            console.log(filtro)
-            setProducts(filtro)
-            })
-        .catch(err => console.log("err: ", err) )
+        getProduct(id)
         
     }, [])
     

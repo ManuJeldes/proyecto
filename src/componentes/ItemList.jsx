@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ItemList({product}) {
     
     return (
-    <div>
+    <>
         <div className="">
         <article className="container col-lg-3 col-md-6 mb-3">
                 <div className="card" style={{width: '18rem'}}>
@@ -26,7 +26,7 @@ function ItemList({product}) {
                 </div>
             </article>
     </div>    
-    </div>
+    </>
     )}
 
 export default ItemList;
