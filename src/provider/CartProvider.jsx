@@ -14,7 +14,7 @@ export function CartProvider ({children}) {
             // console.log(itemExiste)
             if (!itemExiste) {
                 setCart([...cart, {id:producto.id, nombre:producto.nombre, foto:producto.foto, precio:producto.precio, cantidad:count, subTotal:(producto.precio*count)}])
-                setUnidadesSeleccionadas(unidadesSeleccionadas+1)
+                setUnidadesSeleccionadas(unidadesSeleccionadas+count)
                 setSubTotal(subTotal+(producto.precio*count))
             } else {
                 const cartActualizado = cart.map(item => {
@@ -27,7 +27,7 @@ export function CartProvider ({children}) {
                     return item
                 
                 })
-            
+                setUnidadesSeleccionadas(unidadesSeleccionadas+count)    
                 setCart(cartActualizado)
                 console.log(cartActualizado)
                 setSubTotal(subTotal+(producto.precio*count))
@@ -40,7 +40,7 @@ export function CartProvider ({children}) {
             const nuevoCart = cart.filter((item) => item.id !== id)
         setCart (nuevoCart)
         setSubTotal(subTotal-(cantidad*precio))
-        setUnidadesSeleccionadas(unidadesSeleccionadas - 1)
+        setUnidadesSeleccionadas(unidadesSeleccionadas - cantidad)
         }
 
         function clear () {

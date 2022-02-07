@@ -13,7 +13,7 @@ export function CartWidget (props) {
         <div className="mt-3 ms-5">
             
             <img src="../img/carrito.png" alt="cartwidgets" width="40px" height="40px"/>
-            <span className="numOfItem">{numOfItem.cart.length}</span>
+            <span className="numOfItem">{numOfItem.unidadesSeleccionadas}</span>
             
         </div>
         </Fragment>
