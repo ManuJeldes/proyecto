@@ -11,7 +11,7 @@ export function CartProvider ({children}) {
 
         function addItem (producto, count)  {
             const itemExiste = cart.find(item => item.id === producto.id)
-            // console.log(itemExiste)
+            
             if (!itemExiste) {
                 setCart([...cart, {id:producto.id, nombre:producto.nombre, foto:producto.foto, precio:producto.precio, cantidad:count, subTotal:(producto.precio*count)}])
                 setUnidadesSeleccionadas(unidadesSeleccionadas+count)
@@ -29,7 +29,6 @@ export function CartProvider ({children}) {
                 })
                 setUnidadesSeleccionadas(unidadesSeleccionadas+count)    
                 setCart(cartActualizado)
-                console.log(cartActualizado)
                 setSubTotal(subTotal+(producto.precio*count))
             }
         }
@@ -48,11 +47,6 @@ export function CartProvider ({children}) {
             setUnidadesSeleccionadas(0)
             setSubTotal(0)        
         }
-        
-
-        // function isInCart () {
-
-        // }
 
     
     return (<CartContext.Provider value={{cart, unidadesSeleccionadas, subTotal, addItem, removeItem, clear}} >

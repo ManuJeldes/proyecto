@@ -1,12 +1,11 @@
-import React, {useContex} from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import { useContext } from 'react/cjs/react.development'
 import { Fragment } from 'react/cjs/react.production.min'
 import { CartContext } from '../context/CartContext.js'
 
 
 export function CartWidget (props) {
-    // const{numOfItems}=props
+    
     const numOfItem=useContext(CartContext)
 
     return <Fragment>

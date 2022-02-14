@@ -1,24 +1,21 @@
-import React, {useContext, Fragment} from 'react';
+import React, {useContext} from 'react';
 import { CartContext } from '../../context/CartContext';
-// import { productos } from '../../productos';
 import { useForm } from 'react-hook-form';
 import { createOrder } from '../../firebase';
 import { TextField } from '../TextField';
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content'
-// import Button from "react"
-// import { clear } from '@testing-library/user-event/dist/clear';
+
 
 const Cart = () => {
 
   const MySwal = withReactContent(Swal)
   const form=useForm()  
   const {cart, removeItem, clear, subTotal} =useContext(CartContext)
-  console.log(cart)
 
   async function onSubmit(formValues) {
-      console.log(cart)
+    
       try {
           const newOrderData = {
               buyer: formValues,
@@ -42,7 +39,13 @@ const Cart = () => {
 
       }
       catch (error) {
-          alert(`Ocurrio un error, vuelve a intentar.`)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Ocurrio un error, vuelve a intentar',
+            showConfirmButton: false,
+            timer: 2000
+          })
 
           console.error(error)
       }
@@ -62,19 +65,20 @@ const Cart = () => {
       )
     
       return (
-      <Fragment>      
+      <div>      
           <h1>Carrito De Compras</h1>
-            <div className="d-flex">
+          <div className='d-flex'>
+            <div className="col-sm-6">
                 <div class="">
                   
                     <div class="">
-                        <div className="four columns">
+                        <div className="five columns">
                             <ul>
                                 <div className="submenu">
                                       <div id="carrito">
                                         <a href="#" id="vaciar-carrito" className="btn btn-danger" onClick={()=>clear()}>Vaciar Carrito</a>
                                         <table id="lista-carrito" class="table table-hover">
-
+                                            <div className='d-flex m-3'>
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Imagen</th>
@@ -84,10 +88,10 @@ const Cart = () => {
                                                     <th scope="col">Eliminar</th>
                                                 </tr>
                                             </thead>
-
+                                            </div>
                                             <tbody>
                                               {cart.map((item)=>(
-                                              <Fragment>
+                                              <div className='d-flex'>
                                                   <img src={item.foto} style={{width: '70px'}}/>
                                               
                                               <td>{item.nombre}</td>
@@ -96,13 +100,12 @@ const Cart = () => {
                                               <td>
                                                   <a href="#" className="borrar-producto fas fa-times-circle" data-id={item.id} onClick={()=>removeItem(item.id, item.cantidad, item.precio)}></a>
                                               </td>
-                                              </Fragment>
+                                              </div>
                                               ))}
                                                 
                                             </tbody>
                                         </table>
                                         <p>Total : $ {subTotal}</p>
-                                        <a href="#" id="procesar-pedido" class="btn btn-danger">Realizar pedido</a>
                                         
                                     </div>
                                 </div>
@@ -113,21 +116,12 @@ const Cart = () => {
 
             </div>
 
-            <section>
-                <h2 className="mb-4 text-3xl font-semibold">Valor de la compra</h2>
-                <div className="flex text-2xl">
-                <span className="flex-1 font-semibold">Total $</span>
-                <span>{subTotal}</span>
-                </div>
-            </section>
-
-            <h2>Ingresa tus datos</h2>
-
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="flex flex-col"
+                className="flex flex-col flex-1 ml-8"
                 >
-                    <TextField
+                    <h2>Ingresa tus datos</h2>
+                    <TextField className="ms-5 mb-3"
                         title="Nombre"
                         inputProps={{
                             placeholder: 'Mayerling Tapia',
@@ -135,7 +129,7 @@ const Cart = () => {
                             ...form.register('name')
                         }}
                     />
-                    <TextField
+                    <TextField className="ms-5 mb-3"
                         title="Direccion"
                         inputProps={{
                             placeholder: 'Pasaje Colliguay 1476',
@@ -143,7 +137,7 @@ const Cart = () => {
                             ...form.register('adress')
                         }}
                     />
-                    <TextField
+                    <TextField className="ms-5 mb-3"
                         title="Correo"
                         inputProps={{
                             placeholder: 'Mayerlingcupcakes@gmail.com',
@@ -151,7 +145,7 @@ const Cart = () => {
                             ...form.register('email')
                         }}
                     />
-                    <TextField
+                    <TextField className="ms-5 mb-3"
                         title="Telefono"
                         inputProps={{
                             placeholder: '+56 9 99999999',
@@ -159,15 +153,16 @@ const Cart = () => {
                             ...form.register('phone')
                         }}
                     />
-                    <button className="btn btn-danger"
+                    <button className="btn btn-danger m-5"
                         disable={cart.length === 0}
                     >
                         Finalizar Compra
                     </button>
 
             </form>
+            </div>
 
-        </Fragment>);
+        </div>);
 
                                                 
 

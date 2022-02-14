@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Mayerling CupCakes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducción
+Este es un proyecto que usa ReactJs para visualizar una pastelería llamada Mayerling Cupcakes. Los datos son almacenados en google firestore. El usuario puede selecionar items para comprar, que son mostrados por la aplicación, al seleccionarlo este se almacena en el carrito de compras de donde el usuario puede procesar su orden.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Logo
 
-### `npm start`
+<div align="center" style="height:300px;margin-bottom:32px;">
+    <img src="./public/img/logo.png" width=""></img> 
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Desktop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div align="center" style="height:250px;margin-bottom:5px;">
+    <img src="./public/img/desktop.jpg" width=""></img> 
+</div>
 
-### `npm test`
+## Descripción
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se crea una App a traves de React Js para un proyecto CoderHouse, esta app se trata de una Pastelería llamada Mayerling CupCakes, la cual vende en su mayoría Tortas y Cupcakes.
+https://es.reactjs.org/
 
-### `npm run build`
+## Descripción video
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="center" style="height:360px;margin-bottom:5px;">
+  <a href="">
+    <img src="./public/img/mayerlingcupcakes.gif">
+    <video>
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estructura
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+C:\Users\m3jel\OneDrive\Escritorio\proyectoFinal
+├── package-lock.json
+├── package.json
+├── public
+|  ├── favicon.ico
+|  ├── img
+|  ├── index.html
+|  ├── logo192.png
+|  ├── logo512.png
+|  ├── manifest.json
+|  └── robots.txt
+├── README.md
+└── src
+   ├── App.css
+   ├── App.js
+   ├── App.test.js
+   ├── componentes
+   ├── context
+   ├── firebase
+   ├── index.css
+   ├── index.js
+   ├── logo.svg
+   ├── productos.js
+   ├── provider
+   ├── reportWebVitals.js
+   └── setupTests.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Requerimientos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Bootstrap:** Se puede instalar con
+*npm install bootstrap react-bootstrap* 
 
-## Learn More
+**Instalar Firebase:**
+*npm install firebase@7.24.0*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Router-dom** se puede instalar con el siguiente comando
+_npm install react-router-dom_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Running
+Una vez instalados los paquetes señalados anteriormente, el projecto deberían poder ejecutarse con el comando ***npm start.***
